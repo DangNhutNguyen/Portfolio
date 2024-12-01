@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dang Nhut Nguyen Portfolio</title>
+    <link rel="icon" href="assets/profile-pic-3-1.png" type="image/png" sizes="32x32" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Dang Nhut</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#library">Library</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Dang Nhut</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#library" onclick="toggleMenu()">Library</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic-3-1.png" alt="Dang Nhut profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Dang Nhut</h1>
+        <p class="section__text__p2">"Student Innovator | Bridging AI and Impact."</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/MyCV.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/facebook.png"
+            alt="My Facebook profile"
+            class="icon"
+            onclick="location.href='https://facebook.com/carldaeriusdangnhut'"
+          />
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/dangnhutnguyen/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/dangnhutnguyen'"
+          />
+          <img
+            src="./assets/email.png"
+            alt="My Email"
+            class="icon"
+            onclick="location.href='mailto:penciltalk0910@gmail.com'"
+          />
+          <img
+            src="./assets/twitter.png"
+            alt="My Twitter profile"
+            class="icon"
+            onclick="location.href='https://x.com/NhtNguynHunhng1'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/profile-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>5+ years <br />Fullstack Development
+                <br />Principal Group Manager of Machine Learning
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p> 1st place graduated in Secondary Classes (2023) <br />2nd place in MOE ASEAN Scholarship (2023) <br />Voice of Scholar by Ivypreps Degree (2020)
+              </p>
+            </div>
+          </div>
+            <div class="details-container1">
+              <img
+                src="./assets/success-story.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>My story to AI and Programming</h3>
+              <my-paragraph>
+                In the summer of 2019, I dove into the world of <span class="highlight">Scratch</span>, my first encounter with coding. It felt like unlocking a treasure chest of creativity. With every colorful block, I brought animations to life and crafted games. The thrill of each small success sparked a passion I hadn’t fully understood yet. That summer, <span class="highlight">Scratch</span> was just the beginning of something much bigger.
+              </my-paragraph>
+          
+              <my-paragraph>
+                As my curiosity grew, I transitioned to <span class="highlight">Python</span>, discovering a whole new realm of logic and power. I connected <span class="highlight">Python</span> to <span class="highlight">Arduino</span>, making tangible projects like an <span class="highlight">LED blink</span>—a small light, but a big milestone. This journey led me to control motors, build sensors, and deepen my love for creating interactive projects. But the real turning point came when I discovered <span class="highlight">AI</span>.
+              </my-paragraph>
+          
+              <my-paragraph>
+                <span class="highlight">Machine Learning (ML2019)</span> captivated me completely. I trained my first model to recognize <span class="highlight">patterns</span> and watched it <span class="highlight">learn</span>, adapt, and improve. AI was no longer just code; it was a perfect blend of logic, creativity, and problem-solving. Looking back, the summer of 2019 marked the beginning of my journey from <span class="highlight">Scratch</span> to <span class="highlight">Python</span>, <span class="highlight">Arduino</span>, and finally to <span class="highlight">AI</span>, a journey that transformed my love for coding and opened up endless possibilities.
+              </my-paragraph>      
+            </div>
+          </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SASS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node.js</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Django</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Flask</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+          
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+          
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>RESTful APIs</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          
+          <div class="details-container">
+            <h2 class="experience-sub-title">AI Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TensorFlow</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PyTorch</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>scikit-learn</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>OpenCV</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Keras</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>OpenAI API</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="details-container">
+          <h2 class="experience-sub-title">Embed Development</h2>
+          <div class="article-container">
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Arduino</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Raspberry Pi</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>ESP32</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>ARM Cortex-M</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>PlatformIO</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+        
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Microchip MPLAB X</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+        
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>FreeRTOS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+        
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>LabVIEW</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+        
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Keil uVision</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+        
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Atmel Studio</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+        
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Simulink</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+        
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>TI Code Composer</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>        
+        
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/projects1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+              
+            </div>
+            <h2 class="experience-sub-title project-title">Concentrated solar power (CSP)</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://docs.google.com/document/d/1Axhb98XnLnaiCSB3r4rcCgJQ1z8-dbk3/edit?usp=sharing&ouid=114882910592712107404&rtpof=true&sd=true'"
+              >
+                Documentary
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://drive.google.com/drive/folders/1g0kjru5iUEEIMqUf0hc3hUX7bRBMZUkr?usp=drive_link'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/projects2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Harmonic Motion Simulation</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DangNhutNguyen/HARMONIC-MOTION'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://dangnhutnguyen.github.io/HARMONIC-MOTION/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/projects3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Digit Recognition - 5x5 Grid (tkinter & numpy usage)</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DangNhutNguyen/5x5-Digits-Train-Neural-Network-Data'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DangNhutNguyen/5x5-Digits-Train-Neural-Network-Data/blob/main/draw_number.py'"
+              >
+                Code
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/projects4.png"
+                alt="Project 4"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Neural Network from Scratch</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DangNhutNguyen/Neural-Network-from-Scratch'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DangNhutNguyen/Neural-Network-from-Scratch/blob/main/main.py'"
+              >
+                Code
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/projects5.png"
+                alt="Project 5"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Paper-io Cheated Menu</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DangNhutNguyen/PAPER-IO.COM-HACK?tab=readme-ov-file'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://greasyfork.org/en/scripts/502044-paper-io-by-dangnhutnguyen'"
+              >
+                Greasyfork
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/projects6.png"
+                alt="Project 6"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Google Form Auto</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DangNhutNguyen/GOOGLE-FORM-AUTO?tab=readme-ov-file'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DangNhutNguyen/GOOGLE-FORM-AUTO/blob/main/main.py'"
+              >
+                Code
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-info-upper-container">
+          <!-- Updated Section -->
+          <div class="contact-info-container">
+            <p>Find out more of my projects on</p>
+          </div>
+          <!-- GitHub Section (Unchanged) -->
+          <div class="contact-info-container">
+            <img
+              src="./assets/github.png"
+              alt="Github icon"
+              class="icon contact-icon"
+            />
+            <p><a href="https://github.com/DangNhutNguyen">GitHub</a></p>
+          </div>
+        </div>        
+
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#library'"
+      />
+    </section>
+
+    <section id="library">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Documentary</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/b1.png"
+                alt="B1"
+                class="project-img1"
+              />
+              </div>
+              <h2 class="experience-sub-title project-title">AIAP-From Zero to Junior - CodliRo</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://drive.google.com/file/d/12cY_yWvdN8btm6pfTLssGbZyaDvvmMap/view?usp=sharing'"
+                >
+                  Documentary
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://bit.ly/AIAPE_Rating_Form'"
+                >
+                  Rating
+                </button>
+              </div>
+            </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/b2.png"
+                alt="B1"
+                class="project-img1"
+              /> 
+            </div>
+            <h2 class="experience-sub-title project-title">Question Construction - CodliRo</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://drive.google.com/file/d/1BLFAQ__SGqdmZbcJeRbcpyxwuFc2D3-2/view?usp=sharing'"
+              >
+                Documentary
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://bit.ly/AIAPE_Rating_Form'"
+              >
+                Rating
+              </button>
+            </div>
+          </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:penciltalk0910@gmail.com">penciltalk0910@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/dangnhutnguyen/">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/github.png"
+            alt="Github icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://github.com/DangNhutNguyen">Github</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#library">Library</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Dang Nhut. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
