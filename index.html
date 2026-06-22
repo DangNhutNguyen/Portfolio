@@ -1,826 +1,623 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dang Nhut Nguyen Portfolio</title>
-    <link rel="icon" href="assets/profile-pic-3-1.png" type="image/png" sizes="32x32" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Dang Nhut</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#library">Library</a></li>
-          <li><a href="#contact">Contact</a></li>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nguyễn Huỳnh Đăng Nhựt — Research Portfolio</title>
+  <meta name="theme-color" content="#f6f3ec">
+  <link rel="icon" href="my_image3.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..600&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ============================= TOP BAR ============================= -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <img src="my_image2.jpg" class="logo-badge">
+        <defs>
+          <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+            <stop offset="0" stop-color="var(--primary)" />
+            <stop offset="1" stop-color="var(--accent)" />
+          </linearGradient>
+        </defs>
+        <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#logoGrad)" />
+        <path d="M13 27V13l14 14V13" stroke="var(--surface)" stroke-width="2.3" fill="none" stroke-linecap="round"
+          stroke-linejoin="round" />
+        </svg>
+        <span class="brand-text">Đăng Nhựt</span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="#about" data-i18n="nav_about"></a>
+        <a href="#education" data-i18n="nav_education"></a>
+        <a href="#research" data-i18n="nav_research"></a>
+        <a href="#projects" data-i18n="nav_projects"></a>
+        <a href="#honors" data-i18n="nav_honors"></a>
+        <a href="#skills" data-i18n="nav_skills"></a>
+        <a href="#contact" data-i18n="nav_contact"></a>
+      </nav>
+
+      <div class="controls">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-pill" id="langPill"></span>
+          <span class="lang-opt" data-lang="vi">VI</span>
+          <span class="lang-opt active" data-lang="en">EN</span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 14.5A8.5 8.5 0 119.5 4 7 7 0 0020 14.5Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================= HERO ============================= -->
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="card hero-card reveal">
+        <div class="avatar-wrap"><img src="my_image.jpg" alt="Nguyễn Huỳnh Đăng Nhựt"></div>
+        <div class="eyebrow" style="justify-content:center;" data-i18n="hero_eyebrow"></div>
+        <h1>Nguyễn Huỳnh Đăng Nhựt</h1>
+        <div class="ticker" aria-hidden="true"><span id="tickerText"></span></div>
+        <p class="hero-bio"
+          data-en="Mathematics, physics, and artificial intelligence — currently exploring computational modeling, optimization, and AI-assisted research workflows."
+          data-vi="Toán học, vật lý và trí tuệ nhân tạo — hiện đang tìm hiểu mô hình hóa tính toán, tối ưu hóa, và các quy trình nghiên cứu có hỗ trợ của AI.">
+        </p>
+        <div class="stat-chips">
+          <div class="chip"><span class="chip-val">9.29</span><span class="chip-label"
+              data-i18n="chip_gpa_label"></span></div>
+          <div class="chip"><span class="chip-val">Neural Network</span><span class="chip-label"
+              data-i18n="chip_ai_label"></span></div>
+          <div class="chip"><span class="chip-val" data-i18n="chip_citizenship_val"></span><span class="chip-label"
+              data-i18n="chip_citizenship_label"></span></div>
+        </div>
+        <div class="hero-links">
+          <a href="mailto:penciltalk0910@gmail.com">Email</a>
+          <a href="https://github.com/DangNhutNguyen" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/dangnhutnguyen/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="nguyenhuynhdangnhut_cv.pdf" target="_blank" rel="noopener">My CV</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================= ABOUT ============================= -->
+  <section id="about">
+    <div class="wrap">
+      <div class="head reveal">
+        <div class="eyebrow" data-i18n="eyebrow_about"></div>
+        <h2 data-i18n="h2_about"></h2>
+      </div>
+      <div class="card about-card reveal">
+        <p data-en="I am particularly interested in the intersection of computer science, artificial intelligence, and applied mathematics for real-world problem solving. My current interests include computational modeling, optimization, machine learning fundamentals, and AI-assisted research workflows."
+          data-vi="Tôi đặc biệt hứng thú với cách khoa học máy tính, trí tuệ nhân tạo và toán học có thể kết hợp để giải quyết những vấn đề thực tế. Hiện nay, tôi dành nhiều thời gian tìm hiểu về mô hình hóa tính toán, các bài toán tối ưu, nền tảng của học máy và cách AI có thể hỗ trợ quá trình nghiên cứu. Điều thu hút tôi nhất không chỉ là việc xây dựng công nghệ mới mà còn là hiểu được những nguyên lý đứng sau chúng và cách chúng được áp dụng để tạo ra tác động trong thực tế.">
+        </p>
+        <p data-en="I hope to further explore how intelligent systems can support scientific discovery, productivity, and human-centered technological development — drawing on mathematics, physics, and computation, with a particular focus on renewable energy systems."
+          data-vi="Tôi mong muốn tiếp tục tìm hiểu cách các hệ thống AI có thể hỗ trợ khám phá khoa học, nâng cao năng suất, và phát triển công nghệ hướng đến con người — dựa trên nền tảng toán học, vật lý và khoa học tính toán, với một hướng quan tâm đặc biệt đến các hệ thống năng lượng tái tạo.">
+        </p>
+        <div class="tagrow">
+          <span class="tag primary" data-en="Mathematics" data-vi="Toán Học"></span>
+          <span class="tag primary" data-en="Combinatorics" data-vi="Tổ Hợp"></span>
+          <span class="tag accent" data-en="Computational Modeling" data-vi="Mô Hình Hóa Tính Toán"></span>
+          <span class="tag accent" data-en="Artificial Intelligence" data-vi="Trí Tuệ Nhân Tạo"></span>
+          <span class="tag accent" data-en="Algorithmic Thinking" data-vi="Tư Duy Giải Thuật"></span>
+          <span class="tag primary" data-en="Scientific Reasoning" data-vi="Lập Luận Khoa Học"></span>
+          <span class="tag accent" data-en="Renewable Energy Systems" data-vi="Hệ Thống Năng Lượng Tái Tạo"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= EDUCATION ============================= -->
+  <section id="education">
+    <div class="wrap stack">
+      <div class="head reveal">
+        <div class="eyebrow" data-i18n="eyebrow_education"></div>
+        <h2 data-i18n="h2_education"></h2>
+      </div>
+
+      <div class="card tl-card reveal">
+        <span class="tl-year" data-en="2023 — Present" data-vi="2023 — Hiện tại"></span>
+        <div class="tl-title" data-en="Nguyễn Khuyến Secondary and High School"
+          data-vi="Trường THCS và THPT Nguyễn Khuyến"></div>
+        <div class="tl-sub" data-en="Specialization: Mathematics, Physics &amp; Chemistry · Vietnam"
+          data-vi="Chuyên ban: Toán, Lý, Hóa · Việt Nam"></div>
+
+        <div class="grade-row">
+          <div class="glabel" data-en="Grade 10" data-vi="Lớp 10"></div>
+          <div class="gbar-track">
+            <div class="gbar-fill" data-width="88.3%"></div>
+          </div>
+          <div class="gval">8.83</div>
+        </div>
+        <div class="grade-row">
+          <div class="glabel" data-en="Grade 11" data-vi="Lớp 11"></div>
+          <div class="gbar-track">
+            <div class="gbar-fill" data-width="89.3%"></div>
+          </div>
+          <div class="gval">8.93</div>
+        </div>
+        <div class="grade-row">
+          <div class="glabel" data-en="Grade 12" data-vi="Lớp 12"></div>
+          <div class="gbar-track">
+            <div class="gbar-fill" data-width="92.9%"></div>
+          </div>
+          <div class="gval">9.29</div>
+        </div>
+        <div class="subj-line" data-en="MATH 9.0 → 9.4 → 9.5  ·  PHYSICS 8.9 → 9.3 → 9.5  ·  CHEMISTRY 8.8 → 9.1 → 9.3"
+          data-vi="TOÁN 9.0 → 9.4 → 9.5  ·  LÝ 8.9 → 9.3 → 9.5  ·  HÓA 8.8 → 9.1 → 9.3"></div>
+        <div class="tl-desc" data-en="Relevant coursework: Mathematics, Physics, Informatics, English."
+          data-vi="Các môn học liên quan: Toán, Vật Lý, Tin Học, Tiếng Anh."></div>
+      </div>
+
+      <div class="card tl-card reveal">
+        <span class="tl-year" data-en="2019 — 2023" data-vi="2019 — 2023"></span>
+        <div class="tl-title" data-en="Đất Đỏ Secondary School" data-vi="Trường THCS Đất Đỏ"></div>
+        <div class="tl-sub" data-en="Vietnam" data-vi="Việt Nam"></div>
+        <div class="tl-desc" data-en="Completed lower secondary education."
+          data-vi="Hoàn thành chương trình trung học cơ sở."></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= RESEARCH EXPERIENCE ============================= -->
+  <section id="research">
+    <div class="wrap stack">
+      <div class="head reveal">
+        <div class="eyebrow" data-i18n="eyebrow_research"></div>
+        <h2 data-i18n="h2_research"></h2>
+      </div>
+
+      <div class="card tl-card reveal">
+        <span class="tl-year" data-en="2024 — Present" data-vi="2024 — Hiện tại"></span>
+        <div class="tl-title" data-en="Independent Study in AI-Assisted Research Workflows"
+          data-vi="Nghiên cứu độc lập về quy trình nghiên cứu có hỗ trợ AI"></div>
+        <div class="tl-desc"
+          data-en="Exploring the use of artificial intelligence tools for literature review, information synthesis, scientific writing support, problem decomposition, and workflow optimization."
+          data-vi="Tìm hiểu việc sử dụng các công cụ trí tuệ nhân tạo trong tổng quan tài liệu, tổng hợp thông tin, hỗ trợ viết khoa học, phân rã vấn đề và tối ưu hóa quy trình làm việc.">
+        </div>
+      </div>
+
+      <div class="card tl-card reveal">
+        <span class="tl-year" data-en="2023 — Present" data-vi="2023 — Hiện tại"></span>
+        <div class="tl-title" data-en="Science and Physics Project Work" data-vi="Các dự án khoa học và vật lý"></div>
+        <div class="tl-desc"
+          data-en="Developed theoretical and experimental projects related to concentrated solar energy, engineering applications, and scientific problem solving."
+          data-vi="Phát triển các dự án lý thuyết và thực nghiệm liên quan đến năng lượng mặt trời tập trung, ứng dụng kỹ thuật, và giải quyết vấn đề khoa học.">
+        </div>
+      </div>
+
+      <div class="card tl-card reveal">
+        <span class="tl-year" data-en="2022 — 2025" data-vi="2022 — 2025"></span>
+        <div class="tl-title" data-en="Energy and Space Science Projects"
+          data-vi="Các dự án khoa học năng lượng và không gian"></div>
+        <div class="tl-desc"
+          data-en="Worked on research-oriented projects involving concentrated solar power technologies, renewable energy solutions, and aerospace engineering concepts."
+          data-vi="Thực hiện các dự án nghiên cứu liên quan đến công nghệ năng lượng mặt trời tập trung, các giải pháp năng lượng tái tạo, và các khái niệm kỹ thuật hàng không vũ trụ.">
+        </div>
+      </div>
+
+      <div class="card tl-card reveal">
+        <span class="tl-year" data-en="2019 — 2023" data-vi="2019 — 2023"></span>
+        <div class="tl-title" data-en="Social and Behavioral Research Projects"
+          data-vi="Các dự án nghiên cứu xã hội và hành vi"></div>
+        <div class="tl-desc"
+          data-en="Participated in social and behavioral initiatives under programs associated with UNICEF, focusing on youth development and educational outreach."
+          data-vi="Tham gia các hoạt động xã hội và hành vi trong khuôn khổ các chương trình liên kết với UNICEF, tập trung vào phát triển thanh thiếu niên và giáo dục cộng đồng.">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= PROJECTS ============================= -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="head reveal">
+        <div class="eyebrow" data-i18n="eyebrow_projects"></div>
+        <h2 data-i18n="h2_projects"></h2>
+      </div>
+
+      <div class="proj-grid">
+        <div class="card proj-card reveal" data-project="focumia" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-top">
+            <div class="proj-title">Focumia</div>
+            <div class="proj-year" data-en="2025 — Present" data-vi="2025 — Hiện tại"></div>
+          </div>
+          <div class="proj-desc"
+            data-en="A productivity-focused application for concentration management and daily workflow efficiency."
+            data-vi="Một ứng dụng tập trung vào năng suất, hỗ trợ quản lý sự tập trung và hiệu quả làm việc hàng ngày.">
+          </div>
+          <div class="proj-cta"><span data-i18n="btn_view_details"></span><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg></div>
+        </div>
+
+        <div class="card proj-card reveal" data-project="promptea" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-top">
+            <div class="proj-title">PrompTEA</div>
+            <div class="proj-year" data-en="2025" data-vi="2025"></div>
+          </div>
+          <div class="proj-desc"
+            data-en="An AI-assisted exploration of prompt engineering, learning support, and LLM workflow automation."
+            data-vi="Một dự án có hỗ trợ AI khám phá kỹ thuật prompt, hỗ trợ học tập, và tự động hóa quy trình với mô hình ngôn ngữ lớn.">
+          </div>
+          <div class="proj-cta"><span data-i18n="btn_view_details"></span><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg></div>
+        </div>
+
+        <div class="card proj-card reveal" data-project="nnscratch" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-top">
+            <div class="proj-title" data-en="Neural Network from Scratch" data-vi="Neural Network from Scratch"></div>
+            <div class="proj-year" data-en="2024" data-vi="2024"></div>
+          </div>
+          <div class="proj-desc"
+            data-en="Implemented neural networks from first principles to study ML fundamentals and backpropagation."
+            data-vi="Xây dựng mạng nơ-ron từ nguyên lý cơ bản để tìm hiểu nền tảng học máy và lan truyền ngược."></div>
+          <div class="proj-cta"><span data-i18n="btn_view_details"></span><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg></div>
+        </div>
+
+        <div class="card proj-card reveal" data-project="mnist" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-top">
+            <div class="proj-title" data-en="MNIST Network Training" data-vi="MNIST Network Training"></div>
+            <div class="proj-year" data-en="2024" data-vi="2024"></div>
+          </div>
+          <div class="proj-desc"
+            data-en="Trained models for handwritten digit recognition, exploring model optimization techniques."
+            data-vi="Huấn luyện mô hình nhận diện chữ số viết tay, tìm hiểu các kỹ thuật tối ưu hóa mô hình."></div>
+          <div class="proj-cta"><span data-i18n="btn_view_details"></span><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg></div>
+        </div>
+
+        <div class="card proj-card reveal" data-project="airesearch" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-top">
+            <div class="proj-title" data-en="AI for Research Efficiency" data-vi="AI cho Hiệu Quả Nghiên Cứu"></div>
+            <div class="proj-year" data-en="2024 — Present" data-vi="2024 — Hiện tại"></div>
+          </div>
+          <div class="proj-desc"
+            data-en="Used AI tools to improve research efficiency, synthesis, and time-optimized workflows."
+            data-vi="Sử dụng công cụ AI để nâng cao hiệu quả nghiên cứu, tổng hợp thông tin, và quản lý quy trình tối ưu thời gian.">
+          </div>
+          <div class="proj-cta"><span data-i18n="btn_view_details"></span><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg></div>
+        </div>
+
+        <div class="card proj-card reveal" data-project="solar" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-top">
+            <div class="proj-title" data-en="Concentrated Solar Power" data-vi="Năng Lượng Mặt Trời Tập Trung"></div>
+            <div class="proj-year" data-en="2023 — 2025" data-vi="2023 — 2025"></div>
+          </div>
+          <div class="proj-desc"
+            data-en="Proposed a concentrated solar approach for cleaner, lower-cost electricity generation."
+            data-vi="Đề xuất giải pháp năng lượng mặt trời tập trung nhằm tạo điện sạch hơn, chi phí thấp hơn."></div>
+          <div class="proj-cta"><span data-i18n="btn_view_details"></span><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg></div>
+        </div>
+
+        <div class="card proj-card reveal" data-project="pencilboo" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-top">
+            <div class="proj-title">PencilBooTalking</div>
+            <div class="proj-year" data-en="2022" data-vi="2022"></div>
+          </div>
+          <div class="proj-desc" data-en="A YouTube animation channel exploring social issues and personal growth."
+            data-vi="Kênh YouTube hoạt hình khai thác các vấn đề xã hội và sự phát triển cá nhân."></div>
+          <div class="proj-cta"><span data-i18n="btn_view_details"></span><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg></div>
+        </div>
+
+        <div class="card proj-card reveal" data-project="drugabuse" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-top">
+            <div class="proj-title" data-en="Impact of Drug Abuse on Children" data-vi="Tác Động của Ma Túy đến Trẻ Em">
+            </div>
+            <div class="proj-year" data-en="2019 — 2020" data-vi="2019 — 2020"></div>
+          </div>
+          <div class="proj-desc"
+            data-en="Research and awareness activities on the social and psychological impact of drug abuse on children."
+            data-vi="Hoạt động nghiên cứu và truyền thông nâng cao nhận thức về tác động xã hội và tâm lý của ma túy đối với trẻ em.">
+          </div>
+          <div class="proj-cta"><span data-i18n="btn_view_details"></span><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= HONORS ============================= -->
+  <section id="honors">
+    <div class="wrap stack">
+      <div class="head reveal">
+        <div class="eyebrow" data-i18n="eyebrow_honors"></div>
+        <h2 data-i18n="h2_honors"></h2>
+      </div>
+
+      <div class="card honor-card reveal">
+        <span class="tl-year" data-en="2026" data-vi="2026"></span>
+        <ul class="honor-list">
+          <li><span class="dot">—</span><span
+              data-en="Second Prize, City-Level Academic Excellence Competition (Physics)"
+              data-vi="Giải Nhì, Kỳ thi Học sinh Giỏi cấp Thành phố (Vật Lý)"></span></li>
         </ul>
       </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Dang Nhut</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+
+      <div class="card honor-card reveal">
+        <span class="tl-year" data-en="2023" data-vi="2023"></span>
+        <ul class="honor-list">
+          <li><span class="dot">—</span><span
+              data-en="First Prize, Provincial Round of the Vietnam Science and Engineering Fair (ViSEF)"
+              data-vi="Giải Nhất, Vòng Tỉnh Cuộc thi Khoa học Kỹ thuật Việt Nam (ViSEF)"></span></li>
+          <li><span class="dot">—</span><span data-en="Second Prize, Provincial-Level VIFOTEC Competition"
+              data-vi="Giải Nhì, Cuộc thi VIFOTEC cấp Tỉnh"></span></li>
+          <li><span class="dot">—</span><span data-en="Encouragement Prize, 24/07 Olympic Competition (Physics)"
+              data-vi="Giải Khuyến Khích, Olympic 24/07 (Vật Lý)"></span></li>
+          <li><span class="dot">—</span><span
+              data-en="Outstanding Young Pioneer Member, Ho Chi Minh Communist Youth Union"
+              data-vi="Đội viên Tiêu biểu , Đoàn Thanh niên Cộng sản Hồ Chí Minh"></span></li>
+        </ul>
+      </div>
+
+      <div class="card honor-card reveal">
+        <span class="tl-year" data-en="2022" data-vi="2022"></span>
+        <ul class="honor-list">
+          <li><span class="dot">—</span><span
+              data-en="Third Prize, Provincial Round of the Vietnam Science and Engineering Fair (ViSEF)"
+              data-vi="Giải Ba, Vòng Tỉnh Cuộc thi Khoa học Kỹ thuật Việt Nam (ViSEF)"></span></li>
+          <li><span class="dot">—</span><span data-en="Encouragement Prize, Provincial-Level VIFOTEC Competition"
+              data-vi="Giải Khuyến Khích, Cuộc thi VIFOTEC cấp Tỉnh"></span></li>
+          <li><span class="dot">—</span><span data-en="Encouragement Prize, 24/07 Olympic Competition (English)"
+              data-vi="Giải Khuyến Khích, Olympic 24/07 (Tiếng Anh)"></span></li>
+          <li><span class="dot">—</span><span
+              data-en="Outstanding Young Pioneer Member, Ho Chi Minh Communist Youth Union"
+              data-vi="Đội viên Tiêu biểu, Đoàn Thanh niên Cộng sản Hồ Chí Minh"></span></li>
+        </ul>
+      </div>
+
+      <div class="card honor-card reveal">
+        <span class="tl-year" data-en="2021 — 2023" data-vi="2021 — 2023"></span>
+        <ul class="honor-list">
+          <li><span class="dot">—</span><span data-en="Vice President, Ba Ria–Vung Tau Provincial Children's Council"
+              data-vi="Phó Chủ tịch, Hội đồng Trẻ em tỉnh Bà Rịa–Vũng Tàu"></span></li>
+        </ul>
+      </div>
+
+      <div class="card honor-card reveal">
+        <span class="tl-year" data-en="2019" data-vi="2019"></span>
+        <ul class="honor-list">
+          <li><span class="dot">—</span><span data-en="IvyPrep Voice of Scholarship for Students (Ages 11–15)"
+              data-vi="IvyPrep Voice of Scholarship dành cho học sinh (11–15 tuổi)"></span></li>
+          <li><span class="dot">—</span><span data-en="National Delegate, 6th National Children's Forum Vietnam"
+              data-vi="Đại biểu Toàn quốc, Diễn đàn Trẻ em Toàn quốc lần thứ 6"></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= SKILLS ============================= -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="head reveal">
+        <div class="eyebrow" data-i18n="eyebrow_skills"></div>
+        <h2 data-i18n="h2_skills"></h2>
+      </div>
+      <div class="card reveal">
+        <div class="skill-label" data-en="Programming" data-vi="Lập Trình"></div>
+        <div class="tagrow">
+          <span class="tag primary">Python</span><span class="tag primary">C++</span>
+          <span class="tag primary">JavaScript</span><span class="tag primary">Java</span>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#library" onclick="toggleMenu()">Library</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+
+        <div class="skill-label" style="margin-top:20px;" data-en="Mathematics" data-vi="Toán Học"></div>
+        <div class="tagrow">
+          <span class="tag accent" data-en="Combinatorics" data-vi="Tổ Hợp"></span>
+          <span class="tag accent" data-en="Probability" data-vi="Xác Suất"></span>
+          <span class="tag accent" data-en="Mathematical Reasoning" data-vi="Lập Luận Toán Học"></span>
+          <span class="tag accent" data-en="Problem Solving" data-vi="Giải Quyết Vấn Đề"></span>
+        </div>
+
+        <div class="skill-label" style="margin-top:20px;" data-en="Software &amp; Tools"
+          data-vi="Phần Mềm &amp; Công Cụ"></div>
+        <div class="tagrow"><span class="tag">LaTeX</span><span class="tag">Git</span><span class="tag">VS Code</span>
+        </div>
+
+        <div class="skill-label" style="margin-top:20px;" data-en="Languages" data-vi="Ngôn Ngữ"></div>
+        <div class="tagrow">
+          <span class="tag" data-en="Vietnamese — Native" data-vi="Tiếng Việt — Bản ngữ"></span>
+          <span class="tag" data-en="English — IELTS 6.0" data-vi="Tiếng Anh — IELTS 6.0"></span>
+        </div>
+        <div class="ielts-row">
+          <div class="ielts-item"><span data-en="Listening" data-vi="Nghe"></span> <b>6.5</b></div>
+          <div class="ielts-item"><span data-en="Reading" data-vi="Đọc"></span> <b>6.0</b></div>
+          <div class="ielts-item"><span data-en="Writing" data-vi="Viết"></span> <b>5.5</b></div>
+          <div class="ielts-item"><span data-en="Speaking" data-vi="Nói"></span> <b>5.5</b></div>
         </div>
       </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic-3-1.png" alt="Dang Nhut profile picture" />
+    </div>
+  </section>
+
+  <!-- ============================= EXTRACURRICULAR ============================= -->
+  <section id="extracurricular">
+    <div class="wrap stack">
+      <div class="head reveal">
+        <div class="eyebrow" data-i18n="eyebrow_leadership"></div>
+        <h2 data-i18n="h2_leadership"></h2>
       </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Dang Nhut</h1>
-        <p class="section__text__p2">"Student Innovator | Bridging AI and Impact."</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/MyCV.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
+
+      <div class="card tl-card reveal">
+        <span class="tl-year" data-en="2024 — Present" data-vi="2024 — Hiện tại"></span>
+        <div class="tl-title" data-en="Independent Writing Projects" data-vi="Các Dự Án Sách Độc Lập"></div>
+        <div class="tl-desc"
+          data-en="Authored long-form manuscripts exploring artificial intelligence, productivity systems, and interdisciplinary problem solving."
+          data-vi="Viết các bài luận độc lập, khai thác trí tuệ nhân tạo, hệ thống năng suất, và các hướng tiếp cận liên ngành để giải quyết vấn đề.">
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/facebook.png"
-            alt="My Facebook profile"
-            class="icon"
-            onclick="location.href='https://facebook.com/carldaeriusdangnhut'"
-          />
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/dangnhutnguyen/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/dangnhutnguyen'"
-          />
-          <img
-            src="./assets/email.png"
-            alt="My Email"
-            class="icon"
-            onclick="location.href='mailto:penciltalk0910@gmail.com'"
-          />
-          <img
-            src="./assets/twitter.png"
-            alt="My Twitter profile"
-            class="icon"
-            onclick="location.href='https://x.com/NhtNguynHunhng1'"
-          />
+        <div style="margin-top:8px;display:flex;gap:16px;flex-wrap:wrap;">
+          <a class="mono" style="font-size:12px;color:var(--primary);" href="https://bit.ly/LogicPT-GT" target="_blank"
+            rel="noopener"><span data-en="Selected work" data-vi="Tác phẩm chọn lọc"></span>: LogicPT–GT ↗</a>
+          <a class="mono" style="font-size:12px;color:var(--primary);" href="https://bit.ly/AIAPE-Education"
+            target="_blank" rel="noopener"><span data-en="Selected work" data-vi="Tác phẩm chọn lọc"></span>:
+            AIAPE–Education ↗</a>
         </div>
       </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/profile-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
 
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>5+ years <br />Fullstack Development
-                <br />Principal Group Manager of Machine Learning
-              </p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p> 1st place graduated in Secondary Classes (2023) <br />2nd place in MOE ASEAN Scholarship (2023) <br />Voice of Scholar by Ivypreps Degree (2020)
-              </p>
-            </div>
-          </div>
-            <div class="details-container1">
-              <img
-                src="./assets/success-story.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>My story to AI and Programming</h3>
-              <my-paragraph>
-                In the summer of 2019, I dove into the world of <span class="highlight">Scratch</span>, my first encounter with coding. It felt like unlocking a treasure chest of creativity. With every colorful block, I brought animations to life and crafted games. The thrill of each small success sparked a passion I hadn’t fully understood yet. That summer, <span class="highlight">Scratch</span> was just the beginning of something much bigger.
-              </my-paragraph>
-          
-              <my-paragraph>
-                As my curiosity grew, I transitioned to <span class="highlight">Python</span>, discovering a whole new realm of logic and power. I connected <span class="highlight">Python</span> to <span class="highlight">Arduino</span>, making tangible projects like an <span class="highlight">LED blink</span>—a small light, but a big milestone. This journey led me to control motors, build sensors, and deepen my love for creating interactive projects. But the real turning point came when I discovered <span class="highlight">AI</span>.
-              </my-paragraph>
-          
-              <my-paragraph>
-                <span class="highlight">Machine Learning (ML2019)</span> captivated me completely. I trained my first model to recognize <span class="highlight">patterns</span> and watched it <span class="highlight">learn</span>, adapt, and improve. AI was no longer just code; it was a perfect blend of logic, creativity, and problem-solving. Looking back, the summer of 2019 marked the beginning of my journey from <span class="highlight">Scratch</span> to <span class="highlight">Python</span>, <span class="highlight">Arduino</span>, and finally to <span class="highlight">AI</span>, a journey that transformed my love for coding and opened up endless possibilities.
-              </my-paragraph>      
-            </div>
-          </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node.js</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express.js</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Django</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Flask</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-          
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQL</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-          
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>RESTful APIs</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          
-          <div class="details-container">
-            <h2 class="experience-sub-title">AI Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TensorFlow</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PyTorch</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>scikit-learn</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>OpenCV</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Keras</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>OpenAI API</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-
-        <div class="details-container">
-          <h2 class="experience-sub-title">Embed Development</h2>
-          <div class="article-container">
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Arduino</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Raspberry Pi</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>ESP32</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>ARM Cortex-M</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>PlatformIO</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-        
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Microchip MPLAB X</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-        
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>FreeRTOS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-        
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>LabVIEW</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-        
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Keil uVision</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-        
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Atmel Studio</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-        
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Simulink</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-        
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>TI Code Composer</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
-        </div>        
-        
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/projects1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-              
-            </div>
-            <h2 class="experience-sub-title project-title">Concentrated solar power (CSP)</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://docs.google.com/document/d/1Axhb98XnLnaiCSB3r4rcCgJQ1z8-dbk3/edit?usp=sharing&ouid=114882910592712107404&rtpof=true&sd=true'"
-              >
-                Documentary
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://drive.google.com/drive/folders/1g0kjru5iUEEIMqUf0hc3hUX7bRBMZUkr?usp=drive_link'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/projects2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Harmonic Motion Simulation</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/DangNhutNguyen/HARMONIC-MOTION'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://dangnhutnguyen.github.io/HARMONIC-MOTION/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/projects3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Digit Recognition - 5x5 Grid (tkinter & numpy usage)</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/DangNhutNguyen/5x5-Digits-Train-Neural-Network-Data'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/DangNhutNguyen/5x5-Digits-Train-Neural-Network-Data/blob/main/draw_number.py'"
-              >
-                Code
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/projects4.png"
-                alt="Project 4"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Neural Network from Scratch</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/DangNhutNguyen/Neural-Network-from-Scratch'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/DangNhutNguyen/Neural-Network-from-Scratch/blob/main/main.py'"
-              >
-                Code
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/projects5.png"
-                alt="Project 5"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Paper-io Cheated Menu</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/DangNhutNguyen/PAPER-IO.COM-HACK?tab=readme-ov-file'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://greasyfork.org/en/scripts/502044-paper-io-by-dangnhutnguyen'"
-              >
-                Greasyfork
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/projects6.png"
-                alt="Project 6"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Google Form Auto</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/DangNhutNguyen/GOOGLE-FORM-AUTO?tab=readme-ov-file'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/DangNhutNguyen/GOOGLE-FORM-AUTO/blob/main/main.py'"
-              >
-                Code
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-info-upper-container">
-          <!-- Updated Section -->
-          <div class="contact-info-container">
-            <p>Find out more of my projects on</p>
-          </div>
-          <!-- GitHub Section (Unchanged) -->
-          <div class="contact-info-container">
-            <img
-              src="./assets/github.png"
-              alt="Github icon"
-              class="icon contact-icon"
-            />
-            <p><a href="https://github.com/DangNhutNguyen">GitHub</a></p>
-          </div>
-        </div>        
-
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#library'"
-      />
-    </section>
-
-    <section id="library">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Documentary</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/b1.png"
-                alt="B1"
-                class="project-img1"
-              />
-              </div>
-              <h2 class="experience-sub-title project-title">AIAP-From Zero to Junior - CodliRo</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://drive.google.com/file/d/12cY_yWvdN8btm6pfTLssGbZyaDvvmMap/view?usp=sharing'"
-                >
-                  Documentary
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://bit.ly/AIAPE_Rating_Form'"
-                >
-                  Rating
-                </button>
-              </div>
-            </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/b2.png"
-                alt="B1"
-                class="project-img1"
-              /> 
-            </div>
-            <h2 class="experience-sub-title project-title">Question Construction - CodliRo</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://drive.google.com/file/d/1BLFAQ__SGqdmZbcJeRbcpyxwuFc2D3-2/view?usp=sharing'"
-              >
-                Documentary
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://bit.ly/AIAPE_Rating_Form'"
-              >
-                Rating
-              </button>
-            </div>
-          </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:penciltalk0910@gmail.com">penciltalk0910@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/dangnhutnguyen/">LinkedIn</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/github.png"
-            alt="Github icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://github.com/DangNhutNguyen">Github</a></p>
+      <div class="card tl-card reveal">
+        <span class="tl-year" data-en="2023 — Present" data-vi="2023 — Hiện tại"></span>
+        <div class="tl-title" data-en="Leadership, CodliRo — Code Like Professional"
+          data-vi="Lãnh đạo, CodliRo — Code Like Professional"></div>
+        <div class="tl-desc"
+          data-en="Contributed to a student-led programming community focused on computational thinking, mentorship, and STEM initiatives."
+          data-vi="Đóng góp cho cộng đồng lập trình do học sinh dẫn dắt, tập trung vào tư duy tính toán, cố vấn đồng đẳng, và các sáng kiến STEM.">
         </div>
       </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#library">Library</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+
+      <div class="card tl-card reveal">
+        <span class="tl-year" data-en="2022 — Present" data-vi="2022 — Hiện tại"></span>
+        <div class="tl-title" data-en="Academic Competitions &amp; Research Activities"
+          data-vi="Các Hoạt Động Thi Học Thuật &amp; Nghiên Cứu"></div>
+        <div class="tl-desc"
+          data-en="Participated in ViSEF, VIFOTEC, and provincial excellent student competitions; conducted independent STEM research."
+          data-vi="Tham gia các kỳ thi ViSEF, VIFOTEC, và các cuộc thi học sinh giỏi cấp tỉnh; thực hiện các nghiên cứu STEM độc lập.">
         </div>
-      </nav>
-      <p>Copyright &#169; 2024 Dang Nhut. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+      </div>
+
+      <div class="card tl-card reveal">
+        <span class="tl-year" data-en="2021 — 2023" data-vi="2021 — 2023"></span>
+        <div class="tl-title" data-en="Vice President, Ba Ria–Vung Tau Provincial Children's Council"
+          data-vi="Phó Chủ tịch, Hội đồng Trẻ em tỉnh Bà Rịa–Vũng Tàu"></div>
+        <div class="tl-desc"
+          data-en="Represented youth voices in provincial discussions and child advocacy initiatives focused on children's rights and education."
+          data-vi="Đại diện tiếng nói thanh thiếu niên trong các thảo luận cấp tỉnh và các sáng kiến vận động vì quyền trẻ em và giáo dục.">
+        </div>
+      </div>
+
+      <div class="card tl-card reveal">
+        <span class="tl-year" data-en="2019" data-vi="2019"></span>
+        <div class="tl-title" data-en="Delegate, 6th National Children's Forum Vietnam"
+          data-vi="Đại biểu, Diễn đàn Trẻ em Toàn quốc lần thứ 6"></div>
+        <div class="tl-desc"
+          data-en="Represented provincial youth in national discussions on child rights, education, and public participation."
+          data-vi="Đại diện thanh thiếu niên cấp tỉnh trong các thảo luận toàn quốc về quyền trẻ em, giáo dục, và sự tham gia công cộng.">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= CONTACT ============================= -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="card contact-card reveal">
+        <div class="eyebrow" data-i18n="eyebrow_contact"></div>
+        <h2
+          data-en="Open to research collaborations, mentorship, and conversations about mathematics, AI, and renewable energy."
+          data-vi="Luôn sẵn sàng cho các hợp tác nghiên cứu, cơ hội được cố vấn, và những trao đổi về toán học, AI, và năng lượng tái tạo.">
+        </h2>
+        <div class="contact-links">
+          <a href="mailto:penciltalk0910@gmail.com">penciltalk0910@gmail.com</a>
+          <a href="https://linktr.ee/nguyenhuynhdangnhut">Linktree — DangNhutNguyen</a>
+          <a href="https://github.com/DangNhutNguyen" target="_blank" rel="noopener">GitHub — DangNhutNguyen</a>
+          <a href="https://github.com/CodliRo" target="_blank" rel="noopener">GitHub — CodliRo</a>
+        </div>
+        <div class="foot-bottom">
+          <div>Nguyễn Huỳnh Đăng Nhựt · <span data-en="Vietnam" data-vi="Việt Nam"></span></div>
+          <div data-en="Updated 2026" data-vi="Cập nhật 2026"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================= BOTTOM TAB BAR ============================= -->
+  <nav class="tabbar" id="tabbar">
+    <button class="tab-btn active" data-target="#top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <circle cx="12" cy="8" r="3.6" />
+        <path d="M4.5 20c0-4 3.4-6.5 7.5-6.5s7.5 2.5 7.5 6.5" />
+      </svg>
+      <span data-i18n="tab_home"></span>
+    </button>
+    <button class="tab-btn" data-target="#education">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M4 5h12a2 2 0 012 2v12H6a2 2 0 01-2-2V5z" />
+        <path d="M4 5v14" />
+      </svg>
+      <span data-i18n="tab_education"></span>
+    </button>
+    <button class="tab-btn" data-target="#projects">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="7.5" height="7.5" rx="1.5" />
+        <rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5" />
+        <rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5" />
+        <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5" />
+      </svg>
+      <span data-i18n="tab_projects"></span>
+    </button>
+    <button class="tab-btn" id="moreTabBtn" data-target="#more">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <circle cx="5" cy="12" r="1.8" />
+        <circle cx="12" cy="12" r="1.8" />
+        <circle cx="19" cy="12" r="1.8" />
+      </svg>
+      <span data-i18n="tab_more"></span>
+    </button>
+  </nav>
+
+  <!-- ============================= MORE SHEET ============================= -->
+  <div class="sheet-overlay" id="moreOverlay">
+    <div class="sheet more-sheet" id="moreSheet" role="dialog" aria-modal="true">
+      <button class="sheet-close" id="moreClose" aria-label="Close">✕</button>
+      <h3 data-i18n="more_title"></h3>
+      <ul class="more-links">
+        <li><a href="#about" data-i18n="nav_about"></a></li>
+        <li><a href="#research" data-i18n="nav_research"></a></li>
+        <li><a href="#honors" data-i18n="nav_honors"></a></li>
+        <li><a href="#skills" data-i18n="nav_skills"></a></li>
+        <li><a href="#extracurricular" data-i18n="nav_leadership"></a></li>
+        <li><a href="#contact" data-i18n="nav_contact"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============================= PROJECT DETAIL MODAL ============================= -->
+  <div class="sheet-overlay" id="modalOverlay">
+    <div class="sheet" id="modalSheet" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="sheet-close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal-meta mono" id="modalYear"></div>
+      <h3 id="modalTitle"></h3>
+      <div class="modal-tags" id="modalTags"></div>
+      <p class="modal-summary" id="modalSummary"></p>
+      <p class="modal-detail" id="modalDetail"></p>
+      <a class="modal-link" id="modalLink" target="_blank" rel="noopener" style="display:none;"></a>
+    </div>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+
 </html>
